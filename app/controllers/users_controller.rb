@@ -10,6 +10,10 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    #https://stackoverflow.com/questions/39317466/ruby-on-rails-tutorial-michael-hartl-chapter-2-exercise-2-3-3-1-edit-the-user/39317519
+    @user = User.find(params[:id])
+    @micropost = @user.microposts.first
+    
   end
 
   # GET /users/new
